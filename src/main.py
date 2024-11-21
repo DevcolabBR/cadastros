@@ -34,10 +34,10 @@ CREATE TABLE IF NOT EXISTS clientes (
 ''')
 
 # Function to add a new client
-def add_cliente(nome, telefone, rua):
+def add_cliente(nome, nascimento, genero, estado_civil, profissao, telefone, cidade, cep, estado, rua, bairro):
     cursor.execute('''
-    INSERT INTO clientes (nome, telefone, rua) VALUES (?, ?, ?)
-    ''', (nome, telefone, rua))
+    INSERT INTO clientes (nome, nascimento, genero, estado_civil, profissao, telefone, cidade, cep, estado, rua, bairro) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (nome, nascimento, genero, estado_civil, profissao, telefone, cidade, cep, estado, rua, bairro))
     conn.commit()
 
 # Example usage
